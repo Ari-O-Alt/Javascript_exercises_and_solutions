@@ -1,26 +1,26 @@
-const appBox = document.getElementById('app');
-const button = document.getElementById('button');
+const appBox = document.getElementById("app");
+const button = document.getElementById("button");
 
 // create function that converts string to array
 const convertString = (string) => {
-  let stringToArray = string.split('');
+  let stringToArray = string.split("");
   return stringToArray;
 };
 
-// cobvert the string to array
-let stringToArray = convertString('Hello world!');
+// convert the string to array
+let stringToArray = convertString("Hello world!");
 
 // create function that print the content of an array to the page
 const printArrayToPage = (string) => {
   string.forEach((element) => {
-    const textBox = document.createElement('div');
+    const textBox = document.createElement("div");
 
     // if we have a letter, give the element a class
-    if (element !== ' ') {
-      textBox.classList.add('letter');
+    if (element !== " ") {
+      textBox.classList.add("letter");
     } else {
       // else give it another one
-      textBox.classList.add('emptySpace');
+      textBox.classList.add("emptySpace");
     }
 
     const text = document.createTextNode(element); // create the text for the newly created div
@@ -40,7 +40,7 @@ const moveLetter = (event) => {
 };
 
 // select all letters/ buttons and add event listeners to them
-const allLetters = document.querySelectorAll('.letter');
-allLetters.forEach((element) => element.addEventListener('click', moveLetter));
-const allSpaces = document.querySelectorAll('.emptySpace');
-allSpaces.forEach((element) => element.addEventListener('click', moveLetter));
+const allLetters = document.querySelectorAll(".letter");
+allLetters.forEach((element) => element.addEventListener("click", moveLetter));
+const allSpaces = document.querySelectorAll(".emptySpace");
+allSpaces.forEach((element) => element.addEventListener("click", moveLetter));
