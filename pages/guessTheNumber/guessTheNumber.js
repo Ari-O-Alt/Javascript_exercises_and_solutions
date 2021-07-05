@@ -34,4 +34,4 @@ const printInput = () => {
   return userAnswer;
 };
 
-button.addEventListener('click', printInput);
+button?.addEventListener('click', printInput);
